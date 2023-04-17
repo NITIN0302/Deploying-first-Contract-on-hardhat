@@ -3,7 +3,7 @@ const {expect} = require("chai");
 describe("Token contract", function(){
 
     it("Deployment should assign the total  supply of token to the owner",async function(){
-        const [owner] = await ethers.getSigners();
+        const [owner] = await ethers.getSigners();//access the account details
 
         console.log("Signers object:",owner);
         const Token = await ethers.getContractFactory("Token"); //creating instance of contract
